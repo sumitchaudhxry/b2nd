@@ -1,135 +1,352 @@
+html {
+  box-sizing: border-box;
+}
+
 body {
-	background-image: linear-gradient(to right top, #1f0537, #380c60, #55108c, #7413bb, #9612eb);
-	height: 100%;
-	margin: 0;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+  background-color: #e3bae8;
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  max-width: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  visibility: hidden;
+  position: relative;
+  overflow: hidden;
+}
+
+.container div.six {
+  top: 10vh;
+  z-index: 1;
+}
+
+.container div.seven,
+.container div.eight {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+.container > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20vh;
+}
+
+.one {
+  font-size: 4.5rem;
+}
+
+.one > img {
+  vertical-align: middle;
+  margin-bottom: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+.two {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.three {
+  font-size: 3rem;
+}
+
+.four .text-box {
+  width: 400px;
+  margin: 0 auto;
+  border: 3px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+
+.text-box p {
+  margin: 0;
+  text-align: left;
+}
+
+.text-box span {
+  visibility: hidden;
+}
+
+.text-box .fake-btn {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  color: #fff;
+  background-color: rgb(237, 21, 21);
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+
+.five p {
+  font-size: 2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.idea-3 strong {
+  padding: 3px 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.five .idea-5 {
+  font-size: 4rem;
+}
+
+.idea-5 span,
+.idea-6 span,
+.wish-hbd span {
+  display: inline-block;
+}
+
+.idea-6 span {
+  font-size: 15rem;
+}
+
+.six {
+  position: relative;
+}
+
+.six img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.six .hat {
+  position: absolute;
+  width: 80px;
+  top: -35px;
+  left: 41.5%;
+}
+
+.baloons img {
+  display: inline-block;
+  position: absolute;
+}
+
+.baloons img:nth-child(even) {
+  left: 10%;
+}
+
+.baloons img:nth-child(odd) {
+  right: 10%;
+}
+
+.baloons img:nth-child(3n + 0) {
+  left: 300%;
+}
+
+.eight svg {
+  width: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.eight svg:nth-child(1) {
+  top: 7vh;
+  left: 5vw;
+  fill: #bd6ecf;
+}
+
+.eight svg:nth-child(2) {
+  top: 23vh;
+  left: 35vw;
+  fill: #7dd175;
+}
+
+.eight svg:nth-child(3) {
+  top: 33vh;
+  left: 23vw;
+  fill: #349d8b;
+}
+
+.eight svg:nth-child(4) {
+  top: 43vh;
+  left: 57vw;
+  fill: #347a9d;
+}
+
+.eight svg:nth-child(5) {
+  top: 68vh;
+  left: 7vw;
+  fill: #c66053;
+}
+
+.eight svg:nth-child(6) {
+  top: 42vh;
+  left: 77vw;
+  fill: #bfaa40;
+}
+
+.eight svg:nth-child(7) {
+  top: 68vh;
+  left: 83vw;
+  fill: #e3bae8;
+}
+
+.eight svg:nth-child(8) {
+  top: 86vh;
+  left: 37vw;
+  fill: #8762cb;
+}
+
+.eight svg:nth-child(9) {
+  top: 94vh;
+  left: 87vw;
+  fill: #9a90da;
+}
+
+.wish-hbd {
+  font-size: 3em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.wish h5 {
+  font-weight: lighter;
+  font-size: 2rem;
+  margin: 10px 0 0;
+}
+
+.nine p {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+#replay {
+  z-index: 3;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-height: 1000px) {
+  .six .hat {
+    left: 40%;
   }
-  
+}
+
+@media screen and (max-height: 800px) {
+  .six .hat {
+    left: 37%;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .six .hat {
+    left: 32%;
+  }
+}
+
+@media screen and (max-height: 850px) and (max-width: 450px) {
+  .six .hat {
+    left: 32%;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
+    width: 90%;
   }
-  
-  .card {
-	position: relative;
-	width: 90%;
-	max-width: 300px;
-	height: 425px;
-	border: 10px solid #9612eb;
-	margin: 60px auto;
-	box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5)), url("https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: #e6f0e6;
-	transform: scale(1);
-	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  .four .text-box {
+    width: 90%;
   }
-  
-  .card:hover {
-	transform: scale(1.1) translateY(-20px);
-	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+
+  .text-box .fake-btn {
+    right: 5px;
+    bottom: -38px;
   }
-  
-  .card .text-container {
-	width: 80%;
-	height: 80%;
-	margin: auto;
+
+  .idea-5 span {
+    display: block;
   }
-  
-  .strikethrough {
-	text-decoration: line-through;
+
+  .idea-6 span {
+    font-size: 10rem;
   }
-  
-  .card .text-container #head {
-	font-family: 'Nobile', sans-serif;
-	font-size: 1.5em;
-	margin: 60px auto;
+
+  .six .hat {
+    width: 50px;
+    top: -20px;
   }
-  
-  .card p {
-	font-size: 1.1em;
-	line-height: 1.4;
-	font-family: 'Nobile';
-	color: #331717;
-	font-style: italic;
-	text-align: center;
-	margin: 30px auto 0px auto;
+
+  .wish-hbd {
+    font-size: 2.2em;
   }
-  
-  .card .front {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	margin: -10px 0px 0px -10px;
-	border: 10px solid #9612eb;
-	backface-visibility: hidden;
-	background-color: #9612eb;
-	transform-style: preserve-3d;
-	transform-origin: 0% 50%;
-	transform: perspective(800px) rotateY(0deg);
-	transition: all 0.8s ease-in-out;
+
+  .wish h5 {
+    font-size: 1.4rem;
   }
-  
-  .card:hover .front {
-	transform: perspective(800px) rotateY(-170deg);
-	background-color: #41718d;
+
+  .nine p {
+    font-size: 1.5rem;
+    font-weight: lighter;
   }
-  
-  .card:hover .back {
-	transform: perspective(800px) rotateY(-170deg);
-	box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
-	background-color: #d2dcd2;
+}
+
+/* New Media Queries for 6:9 aspect ratio */
+@media screen and (max-aspect-ratio: 6/9) {
+  .one {
+    font-size: 3.5rem;
   }
-  
-  .card .back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border: 10px solid #9612eb;
-	margin: -10px 10px 0px -10px;
-	backface-visibility: visible;
-	filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-	transform-style: preserve-3d;
-	transform-origin: 0% 50%;
-	transform: perspective(800px) rotateY(0deg);
-	transition: all 0.8s ease-in-out;
-	background-color: #e6f0e6;
-	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+
+  .two {
+    font-size: 1rem;
   }
-  
-  .imgset {
-	z-index: 1;
-	margin-bottom: -215px;
+
+  .three {
+    font-size: 2.5rem;
   }
-  
-  .imgset img {
-	box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
-	border-radius: 5px;
+
+  .four .text-box {
+    width: 80%;
   }
-  
-  @media (max-width: 600px) {
-	.card {
-	  width: 100%;
-	  height: auto;
-	  margin: 20px auto;
-	  transform: scale(1);
-	}
-	
-	.card:hover {
-	  transform: scale(1.05) translateY(-10px);
-	}
-	
-	.card .text-container #head {
-	  font-size: 1.2em;
-	}
-	
-	.card p {
-	  font-size: 1em;
-	}
+
+  .five p {
+    font-size: 1.5rem;
   }
-  
+
+  .idea-5 {
+    font-size: 3rem;
+  }
+
+  .idea-6 span {
+    font-size: 12rem;
+  }
+
+  .six .hat {
+    width: 60px;
+    top: -30px;
+  }
+
+  .wish-hbd {
+    font-size: 2.5em;
+  }
+
+  .wish h5 {
+    font-size: 1.8rem;
+  }
+
+  .nine p {
+    font-size: 1.5rem;
+  }
+
+  .eight svg {
+    width: 20px;
+  }
+}
